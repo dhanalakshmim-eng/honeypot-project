@@ -1,0 +1,5 @@
+venv/
+cowrie-env/
+__pycache__/
+*.log
+web_logs.txt
