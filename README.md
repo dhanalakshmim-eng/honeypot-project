@@ -17,13 +17,21 @@ The system captures attacker behavior such as login attempts, credentials, and c
 
 honeypot-project/
 ├── cowrie/
+
 ├── web-honeypot/
+
 │   ├── app.py
+
 │   ├── requirements.txt
+
 │   ├── templates/
+
 │   │   └── login.html
+
 │   └── web_logs.txt
+
 ├── screenshots/
+
 └── README.md
 
 ---
@@ -72,7 +80,39 @@ honeypot-project/
 git clone https://github.com/your-username/honeypot-project.git
 cd honeypot-project
 ```
+# 🛡️ Cowrie Honeypot — Working Commands (WSL Ubuntu)
 
+```bash
+wsl
+cd ~
+git clone https://github.com/cowrie/cowrie.git
+cd cowrie
+
+python3 -m venv cowrie-env
+source cowrie-env/bin/activate
+
+python3 -m pip install --upgrade pip
+pip install -r requirements.txt
+
+pip install -e .
+# If blocked:
+pip install -e . --break-system-packages
+
+cowrie start
+
+# If cowrie command not found:
+twistd -n cowrie
+
+# Test SSH honeypot (new terminal)
+ssh root@localhost -p 2222
+
+# View logs
+tail -f ~/cowrie/var/log/cowrie/cowrie.log
+
+# Stop Cowrie
+CTRL + C
+kill -9 $(cat var/run/cowrie.pid)
+```
 ---
 
 ### 🔹 2. Setup and Run Web Honeypot
@@ -140,23 +180,22 @@ cowrie/var/log/cowrie/cowrie.log
 ## 📸 Screenshots
 
 **🌐 Web Honeypot using Flask**
-
+*LOGIN PAGE
 <img width="1898" height="1010" alt="Screenshot 2026-04-15 172821" src="https://github.com/user-attachments/assets/038db5ef-39b1-4089-bfd8-b2aca5efdeab" />
 
 <img width="1202" height="607" alt="Screenshot 2026-04-15 172833" src="https://github.com/user-attachments/assets/a005faf0-ac9b-4384-840c-0562ad1c1139" />
 
+*WEB LOGS
 <img width="1691" height="907" alt="Screenshot 2026-04-15 173136" src="https://github.com/user-attachments/assets/55884183-db08-4899-8cc4-30810131a225" />
 
 **SSH Honeypot using Cowrie**
-
+Cowrie Logs
+  
 <img width="1920" height="1080" alt="Screenshot 2026-04-15 105415" src="https://github.com/user-attachments/assets/47adb458-4657-4d0f-81ad-1862a237f1eb" />
 
 <img width="1920" height="1080" alt="Screenshot 2026-04-15 105334" src="https://github.com/user-attachments/assets/be6faa45-e3c5-4f72-b560-58c2f8156b5d" />
 
 
-* Login Page
-* Web Logs
-* Cowrie Logs
 
 ---
 
