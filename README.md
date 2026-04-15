@@ -129,6 +129,10 @@ cowrie/var/log/cowrie/cowrie.log
 ## 📸 Screenshots
 
 *Add screenshots here for better understanding*
+<img width="1920" height="1080" alt="Screenshot 2026-04-15 105415" src="https://github.com/user-attachments/assets/47adb458-4657-4d0f-81ad-1862a237f1eb" />
+<img width="1920" height="1080" alt="Screenshot 2026-04-15 105334" src="https://github.com/user-attachments/assets/be6faa45-e3c5-4f72-b560-58c2f8156b5d" />
+
+
 
 ---
 
