@@ -30,7 +30,7 @@ honeypot-project/
 
 │   └── web_logs.txt
 
-├── screenshots/
+├── screenshots.md
 
 └── README.md
 
@@ -80,7 +80,7 @@ honeypot-project/
 git clone https://github.com/your-username/honeypot-project.git
 cd honeypot-project
 ```
-# 🛡️ Cowrie Honeypot — Working Commands (WSL Ubuntu)
+# 🛡️SETUP AND RUN Cowrie Honeypot — Working Commands (WSL Ubuntu)
 
 ```bash
 wsl
@@ -130,13 +130,6 @@ http://localhost:5000
 
 ---
 
-### 🔹 3. Setup and Run SSH Honeypot (Cowrie)
-
-```
-cd cowrie
-source cowrie-env/bin/activate
-cowrie start
-```
 
 ---
 
