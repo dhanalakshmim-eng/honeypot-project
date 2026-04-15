@@ -109,6 +109,18 @@ ssh root@localhost -p 2222
 # View logs
 tail -f ~/cowrie/var/log/cowrie/cowrie.log
 
+# Show login attempts (username + password)
+grep "login attempt" var/log/cowrie/cowrie.log
+
+# Show authentication details
+grep "authenticated" var/log/cowrie/cowrie.log
+
+# List session recordings
+ls var/lib/cowrie/tty/
+
+# View attacker session data
+cat var/lib/cowrie/tty/<file>
+
 # Stop Cowrie
 CTRL + C
 kill -9 $(cat var/run/cowrie.pid)
